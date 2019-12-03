@@ -1,3 +1,14 @@
+import React from 'react';
+import MyComponent from './MyComponent';
+
+const App = () => {
+  return <MyComponent name="React" />;
+};
+
+export default App;
+
+{
+  /*
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -9,7 +20,7 @@ class App extends Component{
   }
 }
 
-{/*
+
 function App() {
   const name = '리액트';
   const style = {
@@ -49,5 +60,7 @@ function App() {
     </>
   );
 }
-*/}
+
 export default App;
+*/
+}
