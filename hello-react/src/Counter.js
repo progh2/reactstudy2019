@@ -5,12 +5,12 @@ class Counter extends Component {
     super(props);
     // state의 초깃값 설정하기
     this.state = {
-      number: 0,
-      fixedNumber: 0
+      number: 1,
+      fixedNumber: 3
     };
   }
   render() {
-    const { number, fixedNumber } = this.state; // state를 조회할 때는 this.state로 조회합니다.
+    const { fixedNumber, number } = this.state; // state를 조회할 때는 this.state로 조회합니다.
     return (
       <div>
         <h1>{number}</h1>
