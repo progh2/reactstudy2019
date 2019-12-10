@@ -14,17 +14,15 @@ class Counter extends Component {
         <h2>{fixedNumber}</h2>
         <button // onClick을 통해 버튼이 클릭되었을 때 호출할 함수를 지정합니다.
           onClick={() => {
-            // 방법1
-            this.setState(prevState => {
-              return {
-                number: prevState.number + 1
-              };
-            });
-
-            // 방법2. return이 빠져서 더 깔끔하다.
-            this.setState(prevState => ({
-              number: prevState.number + 1
-            }));
+            this.setState(
+              {
+                number: number + 1
+              },
+              () => {
+                console.log('방금 setState가 호출되었습니다.');
+                console.log(this.state);
+              }
+            );
           }}
         >
           {' '}
