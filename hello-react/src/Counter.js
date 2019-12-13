@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
+  
   state = {
     number: 1,
     fixedNumber: 3
@@ -24,9 +25,8 @@ class Counter extends Component {
               }
             );
           }}
-        >
-          {' '}
-          +1{' '}
+        >        
+          +1
         </button>
       </div>
     );
