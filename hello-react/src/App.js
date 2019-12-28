@@ -4,12 +4,15 @@ import Counter from './Counter';
 import Say from './Say';
 import EventPractice from './EventPractice';
 import ValidationSample from './ValidationSample';
+import RefSample from './RefSample';
 
 const App = () => {
   return (
     <div>
+      <RefSample />
+      <hr />
       <ValidationSample />
-      <hr></hr>
+      <hr />
       <EventPractice />
       <hr></hr>
       <Say />
