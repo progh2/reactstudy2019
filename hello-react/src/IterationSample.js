@@ -23,9 +23,6 @@ const IterationSample = () => {
 
     const onChange = e => setInputText(e.target.value);
     const onClick = () => {
-        if (inputText === '') 
-            return;
-        
 
         const nextNames = names.concat({id: nextId, text: inputText});
         setNextId(nextId + 1);
@@ -33,8 +30,16 @@ const IterationSample = () => {
         setInputText('');
     }
 
+    const onRemove = id => {
+        const nextNames = names.filter(name => name.id !== id);
+        setNames(nextNames);
+    }
+
     const namesList = names.map(name => <li key={
-        name.id
+            name.id
+        }
+        onDoubleClick={
+            () => onRemove(name.id)
     }>
         {
         name.text
@@ -48,5 +53,4 @@ const IterationSample = () => {
         </>
     );
 };
-
 export default IterationSample;
